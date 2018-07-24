@@ -135,7 +135,7 @@ Dso::ErrorCode HantekDsoControl::retrieveChannelLevelData() {
         return Dso::ErrorCode::CONNECTION;
     }
 
-    memcpy(controlsettings.offsetLimit, controlsettings.cmdGetLimits.offsetLimitData(),
+    memcpy(controlsettings.offsetLimit, controlsettings.cmdGetLimits.data(),
            sizeof(OffsetsPerGainStep) * specification->channels);
 
     return Dso::ErrorCode::NONE;
@@ -1223,10 +1223,14 @@ void HantekDsoControl::run() {
             // Start next capture if necessary by leaving out the break statement
 
             if (!this->sampling) break;
-#if __has_cpp_attribute(clang::fallthrough)
-#define FALLTHROUGH [[clang::fallthrough]];
-#elif __has_cpp_attribute(fallthrough)
-#define FALLTHROUGH [[fallthrough]];
+#ifdef __has_cpp_attribute
+    #if __has_cpp_attribute(clang::fallthrough)
+    #define FALLTHROUGH [[clang::fallthrough]];
+    #elif __has_cpp_attribute(fallthrough)
+    #define FALLTHROUGH [[fallthrough]];
+    #else
+    #define FALLTHROUGH
+    #endif
 #else
 #define FALLTHROUGH
 #endif
