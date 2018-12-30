@@ -1,4 +1,4 @@
-# OpenHantek [![Build Status](https://travis-ci.org/OpenHantek/openhantek.svg?branch=master)](https://travis-ci.org/OpenHantek/openhantek) [![Build status](https://ci.appveyor.com/api/projects/status/9w4rd5r04ufqafr4/branch/master?svg=true)](https://ci.appveyor.com/project/davidgraeff/openhantek/branch/master) [![Stability: Maintenance](https://masterminds.github.io/stability/maintenance.svg)](https://masterminds.github.io/stability/maintenance.html)
+# OpenHantek [![Build Status](https://travis-ci.org/OpenHantek/openhantek.svg?branch=master)](https://travis-ci.org/OpenHantek/openhantek) [![Build status](https://ci.appveyor.com/api/projects/status/github/openhantek/openhantek?branch=master&svg=true)](https://ci.appveyor.com/project/openhantek/openhantek/branch/master) [![Stability: Maintenance](https://masterminds.github.io/stability/maintenance.svg)](https://masterminds.github.io/stability/maintenance.html)
 
 OpenHantek is a free software for Hantek and compatible (Voltcraft/Darkwire/Protek/Acetech) USB digital signal oscilloscopes.
 
@@ -25,7 +25,8 @@ OpenHantek is a free software for Hantek and compatible (Voltcraft/Darkwire/Prot
   This allows a minimum window size of 640*480 for old workstation computers.
 
 ## Install prebuilt binary
-Navigate to the [Releases](https://github.com/OpenHantek/openhantek/releases) page 
+Navigate to the [Releases](https://github.com/OpenHantek/openhantek/releases) page.
+* [Download Windows build](https://ci.appveyor.com/project/openhantek/openhantek/branch/master/artifacts)
 
 ## Building OpenHantek from source
 You need the following software, to build OpenHantek from source:
